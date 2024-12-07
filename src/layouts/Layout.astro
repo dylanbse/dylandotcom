@@ -9,6 +9,13 @@ const { title } = Astro.props;
 <!doctype html>
 <html lang="en">
 	<head>
+		<link rel="icon" type="image/x-icon" href="favicon.ico" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Faculty+Glyphic&family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&family=Figtree:ital,wght@0,300..900;1,300..900&family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&display=swap"
+			rel="stylesheet"
+		/>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
@@ -21,30 +28,109 @@ const { title } = Astro.props;
 	</body>
 </html>
 <style is:global>
+	* {
+		margin: 0;
+		padding: 0;
+		font-family: Figtree, sans-serif;
+	}
+
+	*,
+	*:before,
+	*:after {
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
 	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
+		--primary-colour: #363636;
+		--secondary-colour: #b0b0b0;
+		--tertiary-colour: #fc5800;
+		--accent-light: #e4e4e4;
+		--accent-dark: #7d7d7d;
+
 		--accent-gradient: linear-gradient(
 			45deg,
 			rgb(var(--accent)),
 			rgb(var(--accent-light)) 30%,
-			white 60%
+			green 60%
 		);
+
+		.highlight-colour {
+			color: #fc5800;
+		}
+
+		.primary-colour {
+			color: rgb(var(--primary-colour));
+		}
 	}
 	html {
 		font-family: system-ui, sans-serif;
-		background: #13151a;
+		background: var(--accent-light);
+		font-size: 100%;
+		h1 {
+			font-size: 3rem;
+		}
+		h2 {
+			font-size: 2.4rem;
+		}
+		h3 {
+			font-size: 1.9rem;
+		}
+		h4 {
+			font-size: 1.6rem;
+		}
+		h5 {
+			font-size: 1.25rem;
+		}
+
+		@media only screen and (min-width: 1200px) {
+			font-size: 125%;
+			h1 {
+				font-size: 3.8rem;
+			}
+			h2 {
+				font-size: 3.05rem;
+			}
+			h3 {
+				font-size: 2.45rem;
+			}
+			h4 {
+				font-size: 1.95rem;
+			}
+			h5 {
+				font-size: 1.6rem;
+			}
+		}
 	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
+	a,
+	a:hover,
+	a:active,
+	a:visited,
+	a:focus {
+		text-decoration: none;
+		color: black;
+	}
+	ul,
+	ol,
+	nav {
+		list-style: none;
+	}
+
+	button {
+		all: unset;
+	}
+
+	@media (prefers-reduced-motion: no-preference) {
+		@keyframes fadeIn {
+			0% {
+				opacity: 0;
+			}
+			100% {
+				opacity: 1;
+			}
+		}
+		.fade-in {
+			animation: fadeIn 5s;
+		}
 	}
 </style>

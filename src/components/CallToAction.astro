@@ -1,0 +1,71 @@
+---
+const { text } = Astro.props;
+---
+
+<div class="container">
+    <div class="text-section">
+        <h4>{text}</h4>
+    </div>
+    <div class="button-section">
+        <a
+            href="https://calendly.com/dylanbotuli/30min"
+            target="_blank"
+            class="callToAction"
+        >
+            <button> <p>Book your free consultation</p> </button>
+        </a>
+    </div>
+</div>
+
+<style>
+    .container {
+        padding: 50px 20px 50px 20px;
+        background-color: var(--primary-colour);
+        border-radius: 10px;
+        text-align: center;
+    }
+    .callToAction {
+        display: block;
+        align-self: center;
+        margin-top: 10px;
+        text-align: center;
+        border-radius: 12px;
+        border-style: none;
+        padding: 10px;
+        background-color: var(--tertiary-colour);
+        color: white;
+        width: 75%;
+    }
+    .callToAction {
+        margin-top: 20px;
+        transition-duration: 200ms;
+        align-self: flex-start;
+    }
+    .callToAction:hover {
+        background-color: var(--secondary-colour);
+        font-weight: 600;
+    }
+
+    .text-section {
+        color: white;
+    }
+    .button-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+        align-content: center;
+    }
+
+    h4 {
+        font-weight: 400;
+    }
+
+    @media only screen and (min-width: 900px) {
+        .callToAction {
+            width: 50%;
+        }
+    }
+    @media only screen and (min-width: 1200px) {
+    }
+</style>

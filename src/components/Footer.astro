@@ -1,0 +1,87 @@
+---
+import ContentContainer from "./content-containers/ContentContainer.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<div class="container">
+    <ContentContainer>
+        <div class="inner-container">
+            <div>
+                <a id="mobile-logo" href={"/"}>
+                    <Icon slot="logo" name="website-logo" class="logo" />
+                </a>
+
+                <h5>Privacy policy</h5>
+                <p>Dylan Botuli @ All Rights Reserved 2024</p>
+            </div>
+            <div>
+                <h5>Let's talk</h5>
+                <a href="mailto:dylanbotuli@gmail.com">
+                    <Icon slot="logo" name="email" class="linkedin-logo" />
+                </a>
+                <a
+                    id="linkedin-logo-anchor"
+                    target="_blank"
+                    href={"https://www.linkedin.com/in/dylan-botuli-42a711141"}
+                >
+                    <Icon
+                        slot="logo"
+                        name="linkedin-logo"
+                        class="linkedin-logo"
+                    />
+                </a>
+            </div>
+            <div>
+                <h5>Sitemap</h5>
+                <p><a href="/">Home</a></p>
+            </div>
+        </div>
+    </ContentContainer>
+
+    <style>
+        .container {
+            background-color: var(--primary-colour);
+            color: white;
+            padding-bottom: 30px;
+        }
+
+        a {
+            color: white;
+        }
+
+        .inner-container {
+            display: flex;
+            flex-direction: column-reverse;
+            gap: 20px;
+            padding-top: 20px;
+        }
+
+        .logo {
+            font-size: 45px;
+        }
+
+        h5 {
+            font-weight: 400;
+        }
+
+        a:hover {
+            color: var(--tertiary-colour);
+        }
+
+        @media only screen and (min-width: 900px) {
+            .container {
+                height: 30vh;
+            }
+            .inner-container {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .logo {
+                font-size: 75px;
+            }
+        }
+    </style>
+</div>

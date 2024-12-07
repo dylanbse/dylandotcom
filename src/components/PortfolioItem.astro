@@ -1,0 +1,57 @@
+---
+
+---
+
+<div class="itemContainer">
+    <span>
+        <p class="project-image">Logo</p>
+
+        <span>
+            <h5 class="company-name">Company Name</h5>
+            <slot name="company-name" />
+        </span>
+        <span>
+            <p class="project-desc">Short description</p>
+            <slot name="company-name" />
+        </span>
+        <span> <p class="projectName"></p></span>
+    </span>
+</div>
+<style>
+    .itemContainer {
+        border-radius: 8px;
+        box-shadow: 0 0 10px 1px #d3d3d3;
+        transition-duration: 200ms;
+        height: 400px;
+        width: 100%;
+        padding: 10px 0 0 10px;
+        text-align: center;
+        background-color: var(--primary-colour);
+        color: white;
+    }
+
+    .itemContainer:hover {
+        box-shadow: 0 0 20px 1px #d3d3d3;
+    }
+
+    .red {
+        background-color: var(--primary-colour);
+    }
+
+    h5 {
+        font-weight: 400;
+    }
+    @media only screen and (min-width: 576px) {
+    }
+    @media only screen and (min-width: 900px) {
+    }
+    @media only screen and (min-width: 1200px) {
+        .itemContainer {
+            width: 30%;
+            height: 400px;
+            &not(:last-child) {
+                background-color: var(--primary-colour);
+            }
+        }
+    }
+</style>

@@ -1,0 +1,192 @@
+---
+
+---
+
+<section id="contact" class="sectionContainer">
+    <div>
+        <div class="headerSection">
+            <span>
+                <h2 class="blockHeader">CONTACT</h2>
+            </span>
+            <span>
+                <h4 class="blockSubHeader">Get in touch!</h4>
+            </span>
+        </div>
+
+        <div class="blockContainer">
+            {/* https://moderncss.dev/pure-css-custom-checkbox-style/ */}
+            <div class="formContainer">
+                <form class="formContent" id="contactForm">
+                    <div class="personalDetails">
+                        <input
+                            class:list={["name", "formTextInputs"]}
+                            placeholder="Name"
+                            type="text"
+                            id="name"
+                            name="name"
+                            required
+                        />
+                        <input
+                            class:list={["email", "formTextInputs"]}
+                            placeholder="Email"
+                            type="email"
+                            id="email"
+                            name="email"
+                            required
+                        />
+                        <br />
+                    </div>
+
+                    <div class="selectContainer">
+                        <label for="services"> Im interested in:</label>
+                        <div class="checkboxOptions">
+                            <select
+                                class="selectServices"
+                                name="services"
+                                id="services"
+                            >
+                                <option
+                                    id="webDev"
+                                    name="webDev"
+                                    value="webDev"
+                                >
+                                    Website Creation
+                                </option>
+                                <option
+                                    id="landing"
+                                    name="landing"
+                                    value="landing"
+                                >
+                                    Landing Page
+                                </option>
+                                <option
+                                    id="webHosting"
+                                    name="webHosting"
+                                    value="hosting"
+                                >
+                                    Web Hosting
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <textarea
+                        class:list={["messageBox", "formTextInputs"]}
+                        placeholder="Let me know a little bit more about what you need"
+                        id="message"
+                        name="message"></textarea>
+
+                    <label for="submitButton"></label><br />
+                    <input
+                        class="callToAction"
+                        value="Let’s Connect!"
+                        type="submit"
+                        id="submitButton"
+                        name="submitButton"
+                    />
+
+                    <br />
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<style>
+    .sectionContainer {
+        padding-top: 2em;
+        margin-bottom: 5em;
+    }
+
+    .sectionContainer label {
+        margin-bottom: 3.5em;
+    }
+
+    .headerSection {
+        text-align: center;
+        margin-bottom: 1em;
+    }
+
+    .blockContainer {
+        align-content: center;
+        justify-content: center;
+        padding: 0 7em 0 7em;
+    }
+
+    .formContainer {
+        box-shadow: 0em 0em 0.1em 0.1em #d3d3d3;
+        border-width: 0.1em;
+        padding: 4em 4em 0 4em;
+    }
+
+    .formContainer input {
+        font-size: 1em;
+        margin-bottom: 1em;
+        background-color: var(--light-grey);
+    }
+
+    .messageBox {
+        font-size: 1em;
+        width: 100%;
+        height: 10em;
+        word-wrap: break-word;
+        text-wrap: wrap;
+        overflow-wrap: break-word;
+        resize: none;
+    }
+
+    .personalDetails {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .name {
+        margin-right: 1em;
+        width: 50%;
+    }
+    .email {
+        width: 50%;
+    }
+
+    .selectContainer {
+        margin-bottom: 1em;
+    }
+
+    .selectServices {
+        padding: 0.5em 0.5em 0.5em 0.5em;
+        width: 50%;
+        font-size: 1em;
+        margin-top: 0.5em;
+    }
+
+    .selectServices:hover {
+        cursor: pointer;
+    }
+
+    .formTextInputs {
+        padding: 0.5em 0.5em 0.5em 0.5em;
+        font-size: 1em;
+        background-color: var(--light-grey);
+        border-style: none;
+    }
+
+    .checkboxOptions {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .callToAction {
+        margin-top: 3em;
+        height: 3em;
+        border-radius: 25%;
+        border-style: none;
+        width: 10em;
+        transition-duration: 200ms;
+        margin: 2em auto 0 auto;
+        display: block;
+    }
+    .callToAction:hover {
+        cursor: pointer;
+        height: 3.4em;
+        width: 10.4em;
+    }
+</style>

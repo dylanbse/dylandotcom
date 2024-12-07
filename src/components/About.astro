@@ -1,0 +1,100 @@
+---
+import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
+import photo from "../images/headshot.jpg";
+---
+
+<section id="about">
+    <div>
+        <h2>About me</h2>
+        <div class="container">
+            <div class="text-section">
+                <h3>Hello, my name is Dylan!</h3>
+                <p>
+                    I'm a Web Developer with 4 years of backend and full-stack
+                    experience, specialising in Typescript and AWS, across
+                    various sectors including financial technology, E-commerce
+                    and digital consultancy. <br /><br />I believe that a
+                    website is far more than just a digital storefront. It's
+                    also a sales tool, if done right. <br /><br />I aim to help
+                    small business owners make this realisation and make client
+                    acquisition a smoother, time-efficient process. Through
+                    clean, contemporary design and development, I help small
+                    businesses create websites that help them acquire more
+                    clients.
+                </p>
+            </div>
+
+            <div class="image-section">
+                <Image
+                    id="image"
+                    src={photo}
+                    alt="Photo of Dylan Botuli"
+                    width={200}
+                />
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    #image {
+        border-radius: 50%;
+        border: solid 2px var(--primary-colour);
+        margin-bottom: 50px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    h2 {
+        margin-bottom: 20px;
+        /* font-weight: 500; */
+        text-align: center;
+    }
+
+    h3 {
+        font-weight: 550;
+    }
+
+    @media only screen and (min-width: 576px) {
+    }
+    @media only screen and (min-width: 900px) {
+    }
+    @media only screen and (min-width: 1200px) {
+        h2 {
+            margin-bottom: 50px;
+
+            text-align: center;
+        }
+        .text-section {
+            width: 50%;
+        }
+        .image-section {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .child-width {
+            width: 50%;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            align-items: normal;
+        }
+
+        #image {
+            width: 300px;
+            height: 300px;
+        }
+    }
+
+    @media only screen and (min-width: 1440px) {
+    }
+</style>

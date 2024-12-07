@@ -1,0 +1,133 @@
+---
+import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
+import Heading from "./Headings/Heading.astro";
+import photo from "../images/headshot.jpg";
+---
+
+<div id="hero" class:list={["container"]}>
+    <div class="leftSubContainer">
+        <p>Dylan Botuli | Web Developer</p>
+        <Heading>
+            <h1>
+                Boost your sales with <span class="highlight-colour"
+                    >high converting</span
+                > websites.
+            </h1>
+        </Heading>
+        <h1></h1>
+        <p>
+            Designing, developing and optmising premium websites for small
+            businesses and coaches.
+        </p>
+        <a
+            href="https://calendly.com/dylanbotuli/30min"
+            target="_blank"
+            class="callToAction"
+        >
+            <button> Book your free consultation </button>
+        </a>
+    </div>
+    <div class="rightSubContainer">
+        <Image id="image" src={photo} alt="Photo of Dylan Botuli" width={200} />
+
+        <a href="https://www.linkedin.com/in/dylan-botuli-42a711141">
+            <Icon name="linkedin-logo" />
+        </a>
+    </div>
+</div>
+<style>
+    .container {
+        /* padding-top: 50px; */
+        min-height: 80vh;
+    }
+    .leftSubContainer {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .rightSubContainer {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .callToAction {
+        display: block;
+        width: 80%;
+        align-self: center;
+        margin-top: 10px;
+        text-align: center;
+        border-radius: 12px;
+        border-style: none;
+        padding: 10px;
+        background-color: var(--primary-colour);
+        color: white;
+    }
+
+    #image {
+        border-radius: 50%;
+        border: solid 2px var(--primary-colour);
+        margin-top: 25px;
+    }
+
+    h1 {
+        margin: 5px 0 5px;
+        color: var(--primary-colour);
+    }
+
+    p {
+        font-weight: 100;
+    }
+
+    .primary-colour {
+        color: var(--primary-colour);
+    }
+    @media only screen and (min-width: 576px) {
+        .callToAction {
+            width: 50%;
+        }
+        p {
+            font-size: 1.25em;
+        }
+
+        .callToAction {
+            margin-top: 40px;
+        }
+    }
+
+    @media only screen and (min-width: 900px) {
+    }
+    @media only screen and (min-width: 1200px) {
+        .container {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            height: auto;
+            /* padding-top: 100px; */
+        }
+
+        .leftSubContainer {
+            text-align: start;
+            align-items: flex-start;
+            width: 70%;
+        }
+
+        .callToAction {
+            margin-top: 3em;
+            transition-duration: 200ms;
+            align-self: flex-start;
+        }
+        .callToAction:hover {
+            background-color: var(--secondary-colour);
+            font-weight: 600;
+        }
+
+        .rightSubContainer {
+            width: 30%;
+        }
+    }
+    @media only screen and (min-width: 1440px) {
+    }
+</style>

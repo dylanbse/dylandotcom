@@ -1,0 +1,54 @@
+---
+
+---
+
+<div class="itemContainer">
+    <slot name="logo" />
+
+    <slot name="service-name" />
+
+    <div class="text-padding">
+        <slot name="description" />
+    </div>
+</div>
+<style>
+    .itemContainer {
+        border-radius: 8px;
+        box-shadow: 0 0 10px 1px var(--primary-colour);
+        transition-duration: 200ms;
+        height: 300px;
+        width: 100%;
+        align-self: center;
+        padding: 10px 10px 10px 10px;
+        text-align: center;
+        background-color: var(--primary-colour);
+        color: white;
+    }
+
+    .text-padding {
+        padding: 0 40px 0 40px;
+    }
+
+    .red {
+        background-color: var(--primary-colour);
+    }
+
+    @media only screen and (min-width: 576px) {
+        .itemContainer {
+            align-self: center;
+            width: 50%;
+            height: 300px;
+        }
+    }
+    @media only screen and (min-width: 900px) {
+        .itemContainer {
+            width: 30%;
+            height: 400px;
+            &not(:last-child) {
+                background-color: var(--primary-colour);
+            }
+        }
+    }
+    @media only screen and (min-width: 1200px) {
+    }
+</style>

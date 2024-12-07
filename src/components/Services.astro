@@ -1,0 +1,86 @@
+---
+import { Icon } from "astro-icon/components";
+import ServiceItem from "./ServiceItem.astro";
+---
+
+<section id="services" class="sectionContainer">
+    <div class="blockContainer">
+        <div class="headerSection">
+            <h2 class:list={["block-header, fade-in"]}>Services</h2>
+
+            <p class="block-subheader">Here's how I can help you succeed</p>
+        </div>
+        <div class="portfolioSection">
+            <ServiceItem>
+                <Icon slot="logo" name="paintbrush" class="logo" />
+                <h5 slot="service-name">Design</h5>
+                <p slot="description">
+                    I’ll create contemporary designs that have appealing
+                    visuals, layouts and microcopy that relate to your business’
+                    target audience.
+                </p>
+            </ServiceItem>
+            <ServiceItem>
+                <Icon slot="logo" name="terminal" class="logo" />
+                <h5 slot="service-name">Build</h5>
+                <p slot="description">
+                    Using custom code, I’ll add functionality bring the designs
+                    to life, establishing a technically sound foundation.
+                </p>
+            </ServiceItem>
+            <ServiceItem>
+                <Icon slot="logo" name="magnifying-glass" class="logo" />
+                <h5 slot="service-name">Refine</h5>
+                <p slot="description">
+                    Running tests and optimising code to ensure great
+                    performance on all devices, and is SEO ready.
+                </p>
+            </ServiceItem>
+        </div>
+    </div>
+
+    <style>
+        .logo {
+            font-size: 2em;
+            color: var(--tertiary-colour);
+        }
+        .sectionContainer {
+            /* padding-top: 3em; */
+        }
+
+        .headerSection {
+            margin-bottom: 1.5em;
+        }
+
+        .portfolioSection {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        h5 {
+            font-weight: 400;
+        }
+
+        @media only screen and (min-width: 576px) {
+            .portfolioSection {
+                gap: 40px;
+            }
+        }
+        @media only screen and (min-width: 900px) {
+            .headerSection {
+                margin-bottom: 2.5em;
+            }
+
+            .portfolioSection {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+        @media only screen and (min-width: 1200px) {
+            .logo {
+                font-size: 2.5em;
+            }
+        }
+    </style>
+</section>

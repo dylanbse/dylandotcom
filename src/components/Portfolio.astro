@@ -1,0 +1,48 @@
+---
+import PortfolioItem from "./PortfolioItem.astro";
+---
+
+<section class="sectionContainer" id="portfolio">
+    <div class="blockContainer">
+        <div class="headerSection">
+            <span>
+                <h2 class="blockHeader">Work</h2>
+            </span>
+            <span>
+                <p class="blockSubHeader">My recent professional experiences</p>
+            </span>
+        </div>
+        <div class="portfolioSection">
+            <PortfolioItem />
+            <PortfolioItem />
+            <PortfolioItem />
+        </div>
+    </div>
+</section>
+<style>
+    .headerSection {
+        margin-bottom: 1.5em;
+    }
+
+    .portfolioSection {
+        display: flex;
+        flex-direction: column;
+    }
+
+    @media only screen and (min-width: 576px) {
+    }
+    @media only screen and (min-width: 900px) {
+        .headerSection {
+            margin-bottom: 2.5em;
+        }
+    }
+    @media only screen and (min-width: 1200px) {
+        .portfolioSection {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .logo {
+            font-size: 2.5em;
+        }
+    }
+</style>
